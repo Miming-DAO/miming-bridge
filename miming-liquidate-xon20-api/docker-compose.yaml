@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    image: oliverrigonan/mlhuillier-liquidate-xon20-api:latest
+    container_name: mlhuillier-liquidate-xon20-api
+    env_file:
+      - .env
+    ports:
+      - 3002:3000
+    volumes:
+      - /var/mlhuillier/mlhuillier-liquidate-xon20-api/.env:/usr/src/app/.env
