@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    image: oliverrigonan/mlhuillier-send-remittance-api:latest
+    container_name: mlhuillier-send-remittance-api
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    volumes:
+      - /var/mlhuillier/mlhuillier-send-remittance-api/.env:/usr/src/app/.env
