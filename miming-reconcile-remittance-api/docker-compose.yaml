@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    image: oliverrigonan/mlhuillier-reconcile-remittance-api:latest
+    container_name: mlhuillier-reconcile-remittance-api
+    env_file:
+      - .env
+    ports:
+      - 3003:3000
+    volumes:
+      - /var/mlhuillier/mlhuillier-reconcile-remittance-api/.env:/app/.env
